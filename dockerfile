@@ -1,6 +1,6 @@
 FROM open jkd:alphine
-RUN mkdir /mydata
-ADD /bank/target/.-1.0-SNAPSHOT.jar
-CMD java -cp /bank/target/.-1.0-SNAPSHOT.jar com.bank.App
+RUN mkdir -p /mydata
+ADD target/.-1.0-SNAPSHOT.jar mydata/.-1.0-SNAPSHOT.jar
+CMD java -cp /mydata/.-1.0-SNAPSHOT.jar com.bank.App
 
 
